@@ -61,7 +61,7 @@ int main(int argc, char* argv[]) {
   FILE* fp = fopen("results.csv", "w");
   fprintf(fp, "N;B;non-blocking (s);blocking (s)\n");
 
-  for(int ni=0;ni<4;ni++) {
+  for(int ni=0;ni<sizeof(N_values)/sizeof(N_values[0]);ni++) {
     int n = N_values[ni];
 
     double** input   = alloc_matrix(n);
@@ -69,7 +69,7 @@ int main(int argc, char* argv[]) {
     double** output  = alloc_matrix(n);
     double** outputB = alloc_matrix(n);
 
-    for(int bi=0;bi<4;bi++) {
+    for(int bi=0;bi<sizeof(B_values)/sizeof(B_values[0]);bi++) {
       int b = B_values[bi];
 
       for(int i=0;i<n;i++) {
