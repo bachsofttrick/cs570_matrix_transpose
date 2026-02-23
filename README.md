@@ -1,2 +1,2 @@
-# cs570_matrix_transpose
-The matrix transpose function to test cache blocking 
+# CS570 matrix transpose
+The matrix transpose function to test cache blocking.
